@@ -1,3 +1,5 @@
+// noinspection CssReplaceWithShorthandSafely
+
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
@@ -34,7 +36,7 @@ var Wrapper = styled.div`
   min-height: 100%;
   width: 100%;
   background-color: var(--dark-blue);
-  padding: 0 24px;
+  padding: 0 23px;
   padding-top: 16px;
 `;
 
