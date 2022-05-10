@@ -1,14 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { QUERIES } from "../../constants";
-import data from "../../data.json";
-import Planet from "../Nav/ListPlanet";
+import data  from "../../data.js";
+import Planet from ".//ListPlanet";
 import Chevron from "../../assets/icon-chevron.svg";
 
 const Wrapper = styled.nav`
-  padding-top: 44px;
   min-height: 100%;
+  transition: transform .2s ease-in-out;
+  transform: ${({open}) => open ? 'translateX(0)' : 'translateX(-110%)' };
+  background: var(--dark-blue);
+  position: absolute;
+  top: 75px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 25px;
+  padding-top: 44px;
 `;
 
 const ListMenu = styled.ul`
@@ -16,6 +25,7 @@ const ListMenu = styled.ul`
   grid-template-rows: 45px repeat(6, 65px) 45px;
   margin: 0;
   padding: 0;
+  
 `;
 
 const ListItem = styled.li`
@@ -30,11 +40,7 @@ const ListItem = styled.li`
   cursor: pointer;
   transition: background 0.2s ease-in-out;
 
-  &:hover {
-    background: RGBA(255, 255, 255, 0.1);
-    padding: 10px 10px;
-    padding-bottom: 20px;
-  }
+
 
   &:first-of-type {
     align-self: start;
@@ -72,17 +78,19 @@ const StyledLink = styled(Link)`
   width: 100%;
 `;
 
+
 const ChevronIcon = styled.img``;
 
-const Nav = ({ Link }) => {
+const Menu = ({ open, setOpen }) => {
+
   return (
-    <Wrapper>
+    <Wrapper open={open}>
       <ListMenu>
         {data.map((planet, index) => (
-          <ListItem key={index}>
-            <StyledLink to={`/${String(planet.name).toLowerCase()}`}>
+          <ListItem key={index} onClick={() => setOpen(!open)}>
+            <StyledLink to={`/${String(planet.name).toLowerCase()}/overview`}>
               <Info>
-                <Planet className="planet" color={`var(${planet.color})`} />
+                <Planet color={ `var(${planet.color})`} />
                 <Name>{planet.name}</Name>
               </Info>
               <ChevronIcon src={Chevron} />
@@ -94,4 +102,4 @@ const Nav = ({ Link }) => {
   );
 };
 
-export default Nav;
+export default Menu;

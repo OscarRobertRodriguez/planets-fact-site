@@ -1,7 +1,17 @@
-[
+
+import mercury from './assets/planet-mercury.svg';
+import venus from './assets/planet-venus.svg';
+import earth from './assets/planet-earth.svg';
+import mars from './assets/planet-mars.svg';
+import jupiter from './assets/planet-jupiter.svg'
+import saturn from './assets/planet-saturn.svg'
+import uranus from './assets/planet-uranus.svg';
+import neptune from './assets/planet-neptune.svg';
+
+  const data = [
   {
     "name": "Mercury",
-     "color": "--mercury", 
+    "color": "--mercury",
     "overview": {
       "content": "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.",
       "source": "https://en.wikipedia.org/wiki/Mercury_(planet)"
@@ -19,7 +29,7 @@
     "radius": "2,439.7 KM",
     "temperature": "430°c",
     "images": {
-      "planet": "./assets/planet-mercury.svg",
+      "planet": mercury,
       "internal": "./assets/planet-mercury-internal.svg",
       "geology": "./assets/geology-mercury.png"
     }
@@ -44,7 +54,7 @@
     "radius": "6,051.8 KM",
     "temperature": "471°c",
     "images": {
-      "planet": "./assets/planet-venus.svg",
+      "planet": venus,
       "internal": "./assets/planet-venus-internal.svg",
       "geology": "./assets/geology-venus.png"
     }
@@ -69,7 +79,7 @@
     "radius": "6,371 KM",
     "temperature": "16°c",
     "images": {
-      "planet": "./assets/planet-earth.svg",
+      "planet": earth,
       "internal": "./assets/planet-earth-internal.svg",
       "geology": "./assets/geology-earth.png"
     }
@@ -94,7 +104,7 @@
     "radius": "3,389.5 KM",
     "temperature": "-28°c",
     "images": {
-      "planet": "./assets/planet-mars.svg",
+      "planet": mars,
       "internal": "./assets/planet-mars-internal.svg",
       "geology": "./assets/geology-mars.png"
     }
@@ -119,7 +129,7 @@
     "radius": "69,911 KM",
     "temperature": "-108°c",
     "images": {
-      "planet": "./assets/planet-jupiter.svg",
+      "planet": jupiter,
       "internal": "./assets/planet-jupiter-internal.svg",
       "geology": "./assets/geology-jupiter.png"
     }
@@ -144,7 +154,7 @@
     "radius": "58,232 KM",
     "temperature": "-138°c",
     "images": {
-      "planet": "./assets/planet-saturn.svg",
+      "planet": saturn,
       "internal": "./assets/planet-saturn-internal.svg",
       "geology": "./assets/geology-saturn.png"
     }
@@ -169,7 +179,7 @@
     "radius": "25,362 KM",
     "temperature": "-195°c",
     "images": {
-      "planet": "./assets/planet-uranus.svg",
+      "planet": uranus,
       "internal": "./assets/planet-uranus-internal.svg",
       "geology": "./assets/geology-uranus.png"
     }
@@ -194,9 +204,11 @@
     "radius": "24,622 KM",
     "temperature": "-201°c",
     "images": {
-      "planet": "./assets/planet-neptune.svg",
+      "planet": neptune,
       "internal": "./assets/planet-neptune-internal.svg",
       "geology": "./assets/geology-neptune.png"
     }
   }
-]
+];
+
+export default data;

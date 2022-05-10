@@ -1,14 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { QUERIES } from "../constants";
-import Hamburger from "../assets/icon-hamburger.svg";
+import { QUERIES } from "../../constants";
+import Hamburger from "../../assets/icon-hamburger.svg";
 
 const Wrapper = styled.header`
   color: var(--white);
   font-family: "Antonio", sans-serif;
   border-bottom: 1px solid RGBA(255, 255, 255, 0.2);
-  -webkit-background-clip: padding-box; /* for Safari */
-  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
   margin: 0 -24px;
   padding: 0 24px;
   padding-bottom: 16px;
@@ -24,13 +22,15 @@ const Title = styled.h5`
 
 const Icon = styled.img`
   cursor: pointer;
+  opacity: ${({open}) => open ? '.25' : 'revert' };
+  transition: opacity .2s ease;
 `;
 
-const Header = () => {
+const Header = ({open, setOpen}) => {
   return (
     <Wrapper>
       <Title>The Planets</Title>
-      <Icon src={Hamburger} />
+      <Icon open={open} onClick={() => setOpen(!open)} src={Hamburger} />
     </Wrapper>
   );
 };
