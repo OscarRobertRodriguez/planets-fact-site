@@ -69,7 +69,7 @@ function App() {
         <Header open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen}  />
         <RouteWrapper>
-            <Route path='/' element={<Navigate to='/mercury/overview'/>} />
+            <Route path='/' element={<Navigate to='/mercury/overview' replace/>} />
             <Route path='/:planet/overview' element={<Overview  /> }  />
             <Route path='/:planet/internal-structure' element={<Structure/>} />
             <Route path='/:planet/surface-geology' element={<Surface  />} />
