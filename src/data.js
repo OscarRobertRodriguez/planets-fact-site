@@ -8,6 +8,26 @@ import saturn from './assets/planet-saturn.svg'
 import uranus from './assets/planet-uranus.svg';
 import neptune from './assets/planet-neptune.svg';
 
+
+import surfaceMercury from './assets/planet-mercury-internal.svg';
+import surfaceVenus from './assets/planet-venus-internal.svg';
+import surfaceEarth from './assets/planet-earth-internal.svg';
+import surfaceMars from './assets/planet-mars-internal.svg';
+import surfaceJupiter from './assets/planet-jupiter-internal.svg';
+import surfaceSaturn from './assets/planet-saturn-internal.svg';
+import surfaceUranus from './assets/planet-uranus-internal.svg';
+import surfaceNeptune from './assets/planet-neptune-internal.svg'
+
+
+import geologyMercury from './assets/geology-mercury.png';
+import geologyVenus from './assets/geology-venus.png';
+import geologyEarth from './assets/geology-earth.png';
+import geologyMars from './assets/geology-mars.png';
+import geologyJupiter from './assets/geology-jupiter.png';
+import geologySaturn from './assets/geology-saturn.png';
+import geologyUranus from './assets/geology-uranus.png';
+import geologyNeptune from './assets/geology-neptune.png';
+
   const data = [
   {
     "name": "Mercury",
@@ -30,8 +50,13 @@ import neptune from './assets/planet-neptune.svg';
     "temperature": "430°c",
     "images": {
       "planet": mercury,
-      "internal": "./assets/planet-mercury-internal.svg",
-      "geology": "./assets/geology-mercury.png"
+      "internal": surfaceMercury,
+      "geology": geologyNeptune
+    },
+    "imgSizes": {
+      "phone": "111px",
+      "tab": "184px",
+      "desk": "290px"
     }
   },
   {
@@ -55,8 +80,13 @@ import neptune from './assets/planet-neptune.svg';
     "temperature": "471°c",
     "images": {
       "planet": venus,
-      "internal": "./assets/planet-venus-internal.svg",
-      "geology": "./assets/geology-venus.png"
+      "internal": surfaceVenus,
+      "geology": geologyVenus
+    },
+    "imgSizes": {
+      "phone": "154px",
+      "tab": "253px",
+      "desk": "400px"
     }
   },
   {
@@ -80,13 +110,18 @@ import neptune from './assets/planet-neptune.svg';
     "temperature": "16°c",
     "images": {
       "planet": earth,
-      "internal": "./assets/planet-earth-internal.svg",
-      "geology": "./assets/geology-earth.png"
+      "internal": surfaceEarth,
+      "geology": geologyEarth
+    },
+    "imgSizes": {
+      "phone": "173px",
+      "tab": "285px",
+      "desk": "450px"
     }
   },
   {
     "name": "Mars",
-    "color": "--mars", 
+    "color": "--mars",
     "overview": {
       "content": "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the \"Red Planet\".",
       "source": "https://en.wikipedia.org/wiki/Mars"
@@ -105,8 +140,13 @@ import neptune from './assets/planet-neptune.svg';
     "temperature": "-28°c",
     "images": {
       "planet": mars,
-      "internal": "./assets/planet-mars-internal.svg",
-      "geology": "./assets/geology-mars.png"
+      "internal": surfaceMars,
+      "geology": geologyMars
+    },
+    "imgSizes": {
+      "phone": "129px",
+      "tab": "213px",
+      "desk": "336px"
     }
   },
   {
@@ -130,8 +170,13 @@ import neptune from './assets/planet-neptune.svg';
     "temperature": "-108°c",
     "images": {
       "planet": jupiter,
-      "internal": "./assets/planet-jupiter-internal.svg",
-      "geology": "./assets/geology-jupiter.png"
+      "internal": surfaceJupiter,
+      "geology": geologyJupiter
+    },
+    "imgSizes": {
+      "phone": "224px",
+      "tab": "369px",
+      "desk": "582px"
     }
   },
   {
@@ -155,8 +200,13 @@ import neptune from './assets/planet-neptune.svg';
     "temperature": "-138°c",
     "images": {
       "planet": saturn,
-      "internal": "./assets/planet-saturn-internal.svg",
-      "geology": "./assets/geology-saturn.png"
+      "internal": surfaceSaturn,
+      "geology": geologySaturn
+    },
+    "imgSizes": {
+      "phone": "256px",
+      "tab": "422px",
+      "desk": "666px"
     }
   },
   {
@@ -180,8 +230,13 @@ import neptune from './assets/planet-neptune.svg';
     "temperature": "-195°c",
     "images": {
       "planet": uranus,
-      "internal": "./assets/planet-uranus-internal.svg",
-      "geology": "./assets/geology-uranus.png"
+      "internal": surfaceUranus,
+      "geology": geologyUranus
+    },
+    "imgSizes": {
+      "phone": "111px",
+      "tab": "290px",
+      "desk": "176px"
     }
   },
   {
@@ -205,8 +260,13 @@ import neptune from './assets/planet-neptune.svg';
     "temperature": "-201°c",
     "images": {
       "planet": neptune,
-      "internal": "./assets/planet-neptune-internal.svg",
-      "geology": "./assets/geology-neptune.png"
+      "internal": surfaceNeptune,
+      "geology": geologyNeptune
+    },
+    "imgSizes": {
+      "phone": "173px",
+      "tab": "285px",
+      "desk": "450px"
     }
   }
 ];

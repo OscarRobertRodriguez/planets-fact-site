@@ -18,6 +18,12 @@ const Wrapper = styled.nav`
   right: 0;
   padding: 0 25px;
   padding-top: 44px;
+  z-index: 99;
+  
+  @media ${QUERIES.tabletAndUp} {
+    display: none;
+  }
+  
 `;
 
 const ListMenu = styled.ul`
@@ -62,7 +68,7 @@ const Name = styled.h5`
   color: var(--white);
   font-family: "Spartan", sans-serif;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: calc(15rem / 16);
   font-weight: 700;
   text-align: center;
   line-height: 25px;

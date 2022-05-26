@@ -10,9 +10,21 @@ const GlobalStyles = createGlobalStyle`
   margin: 0;
 }
 
+html {
+  --14px: 0.875rem;
+  --15px: 0.9375rem;
+  --16px: 1rem;
+  --17px: 1.0625rem;
+  --18px: 1.125rem;
+  --19px: 1.1875rem;
+  --20px: 1.25rem;
+  --21px: 1.3125rem;
+}
+
 html, body, #root {
   height: 100%;
   margin: 0;
+  background: HSL(240, 67%, 8%);
 }
 
 
@@ -34,8 +46,7 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-#root, #__next {
-}
+
 
 `;
 

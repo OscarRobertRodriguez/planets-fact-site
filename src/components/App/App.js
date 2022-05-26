@@ -6,12 +6,11 @@ import styled from "styled-components";
 import GlobalStyles from "../../GlobalStyles";
 import { QUERIES } from "../../constants";
 import starBackground from "../../assets/background-stars.svg";
-import Menu from "../Menu/Menu";
-import Header from "../Header/Header";
-import Overview from '../pages/Overview';
+import Overview from "../pages/Overview";
 import Structure from "../pages/Structure";
 import Surface from "../pages/Surface";
-import MobilePlanetNav from "../MobilePlanetNav";
+import Menu from "../Menu/Menu";
+import Header from "../Header/Header";
 
 
 const Wrapper = styled.div`
@@ -36,7 +35,30 @@ const Wrapper = styled.div`
   background-color: var(--dark-blue);
   padding: 0 25px;
   padding-top: 16px;
+  padding-bottom: 47px;
+  display: grid;
+  grid-template-rows: min-content min-content  1fr;
+
+  @media ${QUERIES.tabletAndUp} {
+    grid-template-rows: min-content 1fr;
+
+  }
+
+  
+  @media ${QUERIES.desktopAndUp} {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0;
+
+  }
 `;
+
+const RouteWrapper = styled(Routes)`
+  display: grid;
+  justify-content: center;
+`;
+
+
 
 function App() {
 
@@ -46,12 +68,13 @@ function App() {
       <Wrapper style={{ backgroundImage: `url(${starBackground})` }}>
         <Header open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen}  />
-        <Routes>
+        <RouteWrapper>
             <Route path='/' element={<Navigate to='/mercury/overview'/>} />
-            <Route path='/:planet/overview' element={<Overview /> }  />
-            <Route path='/:planet/structure' element={<Structure />} />
-            <Route path='/:planet/surface' element={<Surface  />} />
-        </Routes>
+            <Route path='/:planet/overview' element={<Overview  /> }  />
+            <Route path='/:planet/internal-structure' element={<Structure/>} />
+            <Route path='/:planet/surface-geology' element={<Surface  />} />
+        </RouteWrapper>
+
         <GlobalStyles />
       </Wrapper>
   );
