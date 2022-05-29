@@ -11,6 +11,7 @@ import Structure from "../pages/Structure";
 import Surface from "../pages/Surface";
 import Menu from "../Menu/Menu";
 import Header from "../Header/Header";
+import NotFound from "../NotFound/NotFound";
 
 
 const Wrapper = styled.div`
@@ -26,6 +27,7 @@ const Wrapper = styled.div`
   --dark-blue: HSL(240, 67%, 8%);
   --dark-grey: HSL(240, 17%, 26%);
   --light-grey: HSL(240, 6%, 54%);
+  --star-wars: HSL(183, 89%, 54%);
 
   font-family: "Spartan", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -63,16 +65,20 @@ const RouteWrapper = styled(Routes)`
 function App() {
 
   const [open, setOpen] = useState(false);
-     console.log(useParams(), 'value');
+
+  let {planet} = useParams();
+     console.log(planet, 'value');
     return (
       <Wrapper style={{ backgroundImage: `url(${starBackground})` }}>
         <Header open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen}  />
         <RouteWrapper>
+
             <Route path='/' element={<Navigate to='/mercury/overview' replace/>} />
-            <Route path='/:planet/overview' element={<Overview  /> }  />
+            <Route path='/:planet/overview' element={<Overview/> }  />
             <Route path='/:planet/internal-structure' element={<Structure/>} />
-            <Route path='/:planet/surface-geology' element={<Surface  />} />
+            <Route path='/:planet/surface-geology' element={<Surface/>} />
+            <Route path="*" element={<NotFound />} />
         </RouteWrapper>
 
         <GlobalStyles />

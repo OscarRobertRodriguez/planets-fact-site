@@ -45,8 +45,12 @@ const StyledLink = styled(NavLink)`
 
 const MobilePlanetNav = () => {
     const {planet} = useParams();
-    const [filterPlanet] = data.filter(item => item.name.toLowerCase() === planet);
 
+    let [filterPlanet] = data.filter(item => item.name.toLowerCase() === planet);
+
+    if(!filterPlanet) {
+        filterPlanet = 'mercury';
+    }
 
     return (
      <Wrapper>
