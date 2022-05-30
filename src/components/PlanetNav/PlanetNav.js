@@ -44,6 +44,7 @@ const StyledLink = styled(NavLink)`
   letter-spacing: 1px;
   padding-bottom: 5px;
   cursor: pointer;
+  font-family: 'Spartan', sans-serif;
   @media ${QUERIES.desktopAndUp} {
     padding-bottom: 0;
     padding-top: 30px;
